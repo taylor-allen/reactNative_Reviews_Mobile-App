@@ -5,15 +5,15 @@ import ReviewDetails from '../screens/reviewDetails';
 
 const Stack = createNativeStackNavigator();
 
-export default function ReviewDetailsStack({ navigation }) {
+export default function ReviewDetailsStack({ navigation, title }) {
   return (
     <Stack.Navigator
-      screenOptions={{
-        headerTitle: () => <Header />,
-      }}
+    screenOptions={{
+      headerTitle: () => <Header navigation={navigation} title='Review Details'/>,
+    }}
     >
       <Stack.Screen
-        name="Review Details Page"
+        name="Review Details"
         component={ReviewDetails}
         options={{ title: "Review Details" }}
       />

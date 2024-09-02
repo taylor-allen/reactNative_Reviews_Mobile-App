@@ -10,13 +10,12 @@ export default function AboutStack({ navigation }) {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#333",
+          backgroundColor: "#475D8C",
         },
-        headerTintColor: "#eee",
         headerTitleStyle: {
           fontWeight: "bold",
         },
-        headerTitle: () => <Header />,
+        headerTitle: () => <Header navigation={navigation} title='About the App'/>,
       }}
     >
       <Stack.Screen

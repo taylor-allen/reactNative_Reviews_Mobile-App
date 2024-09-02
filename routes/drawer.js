@@ -11,6 +11,15 @@ export default function RootDrawerNavigator() {
     <Drawer.Navigator initialRouteName="Home"
       screenOptions={{
         headerTitle: () => <Header />,
+        drawerStyle: {
+        backgroundColor: '#E4A793',
+        },
+        drawerLabelStyle: {
+          color: '#F7F9F9',
+          fontSize: 18,
+          fontWeight: 'bold',
+        },
+        drawerActiveBackgroundColor: '#868DA5', 
       }}
     >
       <Drawer.Screen
@@ -20,7 +29,7 @@ export default function RootDrawerNavigator() {
       />
       <Drawer.Screen
         name="About"
-        component={AboutStack}
+        component={AboutStack} // Use AboutStack instead of About directly
         options={{ drawerLabel: "About" }}
       />
     </Drawer.Navigator>

@@ -1,9 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import HomePage from '../screens/homePage';
 import ReviewDetails from '../screens/reviewDetails';
 import Header from '../shared/header';
-import React from 'react';
-import About from '../screens/about';
-import HomePage from '../screens/homePage';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,24 +11,28 @@ export default function HomeStack({ navigation }) {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#333",
+          backgroundColor: "#475D8C",
         },
-        headerTintColor: "#eee",
         headerTitleStyle: {
           fontWeight: "bold",
         },
-        headerTitle: () => <Header/>,
       }}
     >
       <Stack.Screen
         name="Home Screen"
         component={HomePage}
-        options={{ title: "Home" }}
+        options={{
+          title: "Home",
+          headerTitle: () => <Header title="Home" />,
+        }}
       />
       <Stack.Screen
         name="Review Details"
         component={ReviewDetails}
-        options={{ title: "Review Details" }}
+        options={{
+          title: "Review Details",
+          headerTitle: () => <Header title="Review Details" />,
+        }}
       />
     </Stack.Navigator>
   );
