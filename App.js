@@ -56,7 +56,7 @@ export default function App() {
               title: "Review Details Page",
             }}
           />
-          <Stack.Screen name="About" component={About} />
+          {/* <Stack.Screen name="About" component={About} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     );
