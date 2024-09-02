@@ -7,7 +7,7 @@ export default function About({ navigation }) {
         <View style={globalStyles.container}>
             <Text>About Screen</Text>
             <Button
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate('Home Page')}
         title="Go to Home Screen"
       />
         </View>

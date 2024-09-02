@@ -1,13 +1,11 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ReviewDetails from '../screens/reviewDetails';
+import About from '../screens/about';
 import Header from '../shared/header';
 import React from 'react';
-import About from '../screens/about';
-import HomePage from '../screens/homePage';
 
 const Stack = createNativeStackNavigator();
 
-export default function HomeStack({ navigation }) {
+export default function AboutStack({ navigation }) {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -18,18 +16,13 @@ export default function HomeStack({ navigation }) {
         headerTitleStyle: {
           fontWeight: "bold",
         },
-        headerTitle: () => <Header/>,
+        headerTitle: () => <Header />,
       }}
     >
       <Stack.Screen
-        name="Home Screen"
-        component={HomePage}
-        options={{ title: "Home" }}
-      />
-      <Stack.Screen
-        name="Review Details"
-        component={ReviewDetails}
-        options={{ title: "Review Details" }}
+        name="About Page"
+        component={About}
+        options={{ title: "About Details" }}
       />
     </Stack.Navigator>
   );

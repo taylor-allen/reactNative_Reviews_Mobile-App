@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, View, Button, FlatList, TouchableOpacity } from "react-native";
 import { globalStyles } from "../styles/global";
 
-export default function Home({ navigation }) {
+export default function HomePage({ navigation }) {
     const [reviews, setReviews] = useState([
         { title: 'Zelda, Breath of Fresh Air', rating: 5, body: 'lorem ipsum', key: '1'},
         { title: 'Super Mario Odyssey', rating: 4, body: 'lorem ipsum', key: '2'},
