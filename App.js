@@ -14,7 +14,7 @@ const getFonts = () =>
     "nunito-bold": require("./assets/fonts/Nunito-Bold.ttf"),
   });
 
-  const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -30,10 +30,33 @@ export default function App() {
   if (fontsLoaded) {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Review Details" component={ReviewDetails}/>
-          <Stack.Screen name="About" component={About}/>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#333",
+            },
+            headerTintColor: "#eee",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+        >
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title: "Home Page",
+            }}
+          />
+          <Stack.Screen
+            name="Review Details"
+            component={ReviewDetails}
+            options={{
+              title: "Review Details Page",
+            }}
+          />
+          <Stack.Screen name="About" component={About} />
         </Stack.Navigator>
       </NavigationContainer>
     );
