@@ -5,7 +5,7 @@ import ReviewDetails from '../screens/reviewDetails';
 
 const Stack = createNativeStackNavigator();
 
-export default function ReviewDetailsStack({ navigation, title }) {
+export default function ReviewDetailsStack({ navigation }) {
   return (
     <Stack.Navigator
     screenOptions={{
@@ -15,7 +15,7 @@ export default function ReviewDetailsStack({ navigation, title }) {
       <Stack.Screen
         name="Review Details"
         component={ReviewDetails}
-        options={{ title: "Review Details" }}
+        options={{ title: "Review Details"}}
       />
     </Stack.Navigator>
   );

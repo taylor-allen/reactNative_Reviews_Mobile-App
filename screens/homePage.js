@@ -18,7 +18,7 @@ export default function HomePage({ navigation }) {
                         <Text style={globalStyles.titleText}>{ item.title }</Text>
                     </TouchableOpacity>
                 )}
-                keyExtractor={(item) => item.key} // Ensure unique keys
+                keyExtractor={(item) => item.key}
             />
         </View>
     );
