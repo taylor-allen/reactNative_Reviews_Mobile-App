@@ -6,9 +6,10 @@ export default function About({ navigation }) {
     return (
         <View style={globalStyles.container}>
             <Text style={globalStyles.titleText}>About Screen</Text>
+            <Text>This is an app that I'm working on to build my React Native skills.</Text>
             <Button
-        onPress={() => navigation.navigate('Home Page')}
-        title="Go to Home Screen"
+        onPress={() => navigation.navigate('Home')}
+        title="Return to Home Screen"
       />
         </View>
     );
