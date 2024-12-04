@@ -4,25 +4,42 @@ import { globalStyles } from "../styles/global";
 import Card from "../shared/card";
 
 export default function HomePage({ navigation }) {
-    const [reviews, setReviews] = useState([
-        { title: 'Zelda, Breath of Fresh Air', rating: 5, body: 'Amazing game with stunning visuals and gameplay.', key: '1'},
-        { title: 'Super Mario Odyssey', rating: 4, body: 'Great platforming experience with creative levels.', key: '2'},
-        { title: 'The Legend of Zelda: Breath of the Wild', rating: 3, body: 'A revolutionary open-world experience.', key: '3'},
-    ]);
+  const [reviews, setReviews] = useState([
+    {
+      title: "Zelda, Breath of Fresh Air",
+      rating: 5,
+      body: "Amazing game with stunning visuals and gameplay.",
+      key: "1",
+    },
+    {
+      title: "Super Mario Odyssey",
+      rating: 4,
+      body: "Great platforming experience with creative levels.",
+      key: "2",
+    },
+    {
+      title: "The Legend of Zelda: Breath of the Wild",
+      rating: 3,
+      body: "A revolutionary open-world experience.",
+      key: "3",
+    },
+  ]);
 
-    return (
-        <View style={globalStyles.container}>
-            <FlatList 
-                data={reviews} 
-                renderItem={({ item }) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('Review Details', item)}>
-                        <Card>
-                            <Text style={globalStyles.titleText}>{ item.title }</Text>
-                        </Card>
-                    </TouchableOpacity>
-                )}
-                keyExtractor={(item) => item.key}
-            />
-        </View>
-    );
+  return (
+    <View style={globalStyles.container}>
+      <FlatList
+        data={reviews}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Review Details", item)}
+          >
+            <Card>
+              <Text style={globalStyles.titleText}>{item.title}</Text>
+            </Card>
+          </TouchableOpacity>
+        )}
+        keyExtractor={(item) => item.key}
+      />
+    </View>
+  );
 }
